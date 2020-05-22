@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modularizeed todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="topbar_holder">
+        <h1>TODO List</h1>
+        <form id="add_todo" class="add_todo">
+          <input type="text" id="todo_input" placeholder="Type your todo" />
+          <input
+            type="submit"
+            id="submit_button"
+            class="action_button green_button special"
+            value="&gt;"
+          />
+        </form>
+      </div>
+      <ul class="todo_list">
+        <li class="todo_card">
+          <h3 class="todo_title">Test todo 001</h3>
+          <div class="buttons_container">
+            <button class="action_button green_button">
+              &checkmark;
+            </button>
+            <button class="action_button">
+              &cross;
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

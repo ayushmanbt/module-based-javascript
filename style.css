@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #f0f0f0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topbar_holder {
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  background-color: #00d87e;
+}
+
+.add_todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+#todo_input {
+  padding: 7px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: none;
+  margin-right: 10px;
+  font-size: 1rem;
+  display: block;
+  border: 2px solid black;
+  transition: border 0.3s linear, color 0.3s linear 0.3s;
+}
+
+#todo_input:focus {
+  border: 2px solid #003800;
+  color: #003800;
+}
+
+#submit_button {
+  border-radius: 100%;
+  background-color: #ffdea1;
+  color: black;
+  font-weight: bold;
+}
+
+.todo_list {
+  list-style: none;
+  padding: 20px;
+}
+
+.todo_card {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.done h3 {
+  color: red;
+  display: block;
+  position: relative;
+}
+
+.done h3::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+}
+
+.buttons_container {
+  display: flex;
+}
+
+.action_button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ff2a2a;
+  color: #fff;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.action_button:hover {
+  background-color: #be0404;
+}
+
+.action_button .button_text {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.green_button {
+  background-color: #05dd6a;
+  color: black;
+}
+
+.green_button:hover {
+  background-color: #077a2d;
+  color: white;
+}
+
+@media only screen and (max-width: 400px) {
+  .add_todo,
+  .todo_card {
+    flex-direction: column;
+  }
+
+  .container h1 {
+    margin-bottom: 5px;
+  }
+  .buttons_container {
+    margin-top: 10px;
+  }
+
+  #todo_input {
+    margin-bottom: 20px;
+  }
+}
